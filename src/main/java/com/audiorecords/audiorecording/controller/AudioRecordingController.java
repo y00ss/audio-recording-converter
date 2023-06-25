@@ -45,10 +45,10 @@ public class AudioRecordingController {
                 return new ResponseEntity<>(fileContent, headers, HttpStatus.OK);
 
             } catch (IOException e) {
-                return ResponseEntity.internalServerError().body(null);
+                return ResponseEntity.status(500).body("No file".getBytes());
             }
         } else {
-            return ResponseEntity.internalServerError().body(null);
+            return ResponseEntity.status(404).body("File".getBytes());
         }
     }
 }
