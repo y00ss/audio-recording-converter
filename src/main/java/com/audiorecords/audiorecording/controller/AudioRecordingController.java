@@ -20,7 +20,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
 @RestController
-@CrossOrigin(origins = {"*"}, maxAge = 4800, allowCredentials = "false")
+//@CrossOrigin(origins = {"*"}, maxAge = 4800, allowCredentials = "false")
 @RequestMapping("/api")
 public class AudioRecordingController {
 
