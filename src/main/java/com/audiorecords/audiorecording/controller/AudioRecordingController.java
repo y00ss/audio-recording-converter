@@ -20,14 +20,13 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
 @RestController
-//@CrossOrigin(origins = {"*"}, maxAge = 4800, allowCredentials = "false")
-@RequestMapping("/api")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AudioRecordingController {
 
     @Autowired
     AudioRecordService audioRecordService;
 
-    @PostMapping(value = "/upload-audio")
+    @PostMapping(value = "/api/upload-audio")
     public ResponseEntity<byte[]> uploadAudio(@RequestParam("blob") MultipartFile file) throws IOException {
 
         if (!file.isEmpty()) {
