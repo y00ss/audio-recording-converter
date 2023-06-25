@@ -26,7 +26,7 @@ public class AudioRecordingController {
     @Autowired
     AudioRecordService audioRecordService;
 
-    @PostMapping(value = "/api/upload-audio")
+    @GetMapping(value = "/api/upload-audio")
     public ResponseEntity<byte[]> uploadAudio(@RequestParam("blob") MultipartFile file) throws IOException {
 
         if (!file.isEmpty()) {
